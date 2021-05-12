@@ -12,27 +12,27 @@
 - **console.(document.forms)** gives all all the forms in the html file in the type of **HTMLCollection**.
 
 > ### Some document object methods to find/select/get document elements.
->
-> - **To Get element by id**:
->
->   `document.getElementById(id)`
->
-> - **To get elements by class name** which gives us all the elements which has this same className in the type of HTMLCollection.
->
->   `document.getElementsByClassName(className)`
->
-> - **To get elements by tag name** which gives us all the elements which has this same tagName in the type of HTMLCollection.
->
->   `document.getElementsByTagName(tagName)`
->
-> - **To get element using any of the selector(ex. classSelector, id, tagName) using only one mathod** which gives the first matched element.
->
->   `document.querySelector(curresponding selector with its sign as prefix)`
->
->   e.g. `document.querySelector(".className" | "#id" | "tagName" )`
->
-> - **To get element using any of the selector(ex. classSelector, tagName) using only one mathod** which gives all the elements which has this same tagName or classname in the type of NODEList.
->
->   `document.querySelectorAll(curresponding selector with its sign as prefix)`
->
->   e.g `document.querySelectorAll(".classname" | "tagName") `
+
+- **To Get element by id**:
+
+  `document.getElementById(id)`
+
+- **To get elements by class name** which gives us all the elements which has this same className in the type of HTMLCollection.
+
+  `document.getElementsByClassName(className)`
+
+- **To get elements by tag name** which gives us all the elements which has this same tagName in the type of HTMLCollection.
+
+  `document.getElementsByTagName(tagName)`
+
+- **To get element using any of the selector(ex. classSelector, id, tagName) using only one mathod** which gives the first matched element.
+
+  `document.querySelector(curresponding selector with its sign as prefix)`
+
+  e.g. `document.querySelector(".className" | "#id" | "tagName" )`
+
+- **To get element using any of the selector(ex. classSelector, tagName) using only one mathod** which gives all the elements which has this same tagName or classname in the type of NODEList.
+
+  `document.querySelectorAll(curresponding selector with its sign as prefix)`
+
+  e.g `document.querySelectorAll(".classname" | "tagName") `
