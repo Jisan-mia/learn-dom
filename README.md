@@ -15,24 +15,24 @@
 >
 > - **To Get element by id**:
 >
-> > - `document.getElementById(id)`
+>   `document.getElementById(id)`
 >
 > - **To get elements by class name** which gives us all the elements which has this same className in the type of HTMLCollection.
 >
-> > - `document.getElementsByClassName(className)`
+>   `document.getElementsByClassName(className)`
 >
 > - **To get elements by tag name** which gives us all the elements which has this same tagName in the type of HTMLCollection.
 >
-> > - `document.getElementsByTagName(tagName)`
+>   `document.getElementsByTagName(tagName)`
 >
 > - **To get element using any of the selector(ex. classSelector, id, tagName) using only one mathod** which gives the first matched element.
 >
-> > - `document.querySelector(curresponding selector with its sign as prefix)`
+>   `document.querySelector(curresponding selector with its sign as prefix)`
 >
-> > - e.g. `document.querySelector(".className" | "#id" | "tagName" )`
+>   e.g. `document.querySelector(".className" | "#id" | "tagName" )`
 >
 > - **To get element using any of the selector(ex. classSelector, tagName) using only one mathod** which gives all the elements which has this same tagName or classname in the type of NODEList.
 >
-> > - `document.querySelectorAll(curresponding selector with its sign as prefix)`
+>   `document.querySelectorAll(curresponding selector with its sign as prefix)`
 >
-> > - e.g `document.querySelectorAll(".classname" | "tagName") `
+>   e.g `document.querySelectorAll(".classname" | "tagName") `
