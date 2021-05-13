@@ -1,4 +1,4 @@
-# DOM Manupulation
+bk# DOM Manupulation
 
 > ### DOM -> Document Object Model
 >
@@ -14,6 +14,7 @@
 
 ---
 
+<br />
 ### Some document object methods to find/select/get document elements.
 
 - **To Get element by id**:
@@ -42,6 +43,39 @@
 
 ---
 
-\
+</br>
 
 ### DOM Hierarchy Traversing (Parent/Child relation):
+
+> querySelector finds element from top to bottom <br>
+> closest finds element from bottom to top
+
+- Find element from parent to children.:
+
+  `const parent = document.querySelector(parent)`<br />
+  `cosnt children = parent.children`<br />
+
+- Find element from grandParent to children:
+
+  `cosnt grandParent = document.querySelector(grandParent)`<br />
+  `const children = grandParent.querySelectorAll(children)`<br>
+
+- Find element from children to parent:
+
+  `const children = document.querySelector(children)`<br />
+  `const parent = children.parentElement`
+
+- Find element from children to grandParent:
+
+  `const grandParent = children.closest(grandParent)`
+
+- Finding sibling elements
+- Find next immediate sibling
+
+  `cosnt childrenOne = document.querySelector(childrenOne)`<br />
+  `cosnt childrenTwo = childrenOne.nextElementSibling`
+
+- Find previous immeidate sibling
+
+  `const childrenTwo = document.querySelector(childrenTwo)` <br />
+  `const childrenOne = childrenTwo.previousElementSibling`
