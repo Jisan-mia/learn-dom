@@ -1,4 +1,4 @@
-bk# DOM Manupulation
+# DOM Manupulation
 
 > ### DOM -> Document Object Model
 >
