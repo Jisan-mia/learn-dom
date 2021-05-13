@@ -9,9 +9,12 @@
 - **console.log(document.all)** gives us all the elements in the html file in the type of **HTMLAllcollection**
 - **console.log(document.imgaes)** gives us all the img in the html file in the type of **HTMLCollection**
 - **console.log(document.links)** gives us all the links in the html file in the type of **HTMLCollection**
-- **console.(document.forms)** gives all all the forms in the html file in the type of **HTMLCollection**.
+- **console.(document.forms)** gives all all the forms in
+  the html file in the type of **HTMLCollection**.
 
-> ### Some document object methods to find/select/get document elements.
+---
+
+### Some document object methods to find/select/get document elements.
 
 - **To Get element by id**:
 
@@ -36,3 +39,9 @@
   `document.querySelectorAll(curresponding selector with its sign as prefix)`
 
   e.g `document.querySelectorAll(".classname" | "tagName") `
+
+---
+
+\
+
+### DOM Hierarchy Traversing (Parent/Child relation):
