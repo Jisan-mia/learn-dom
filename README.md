@@ -1,10 +1,10 @@
 # DOM Manupulation
 
-> ### DOM -> Document Object Model
->
-> 1. HTML page is a **D**ocument
-> 2. HTML elements are **O**bjects
-> 3. HTML tree structure is the **M**odel
+### DOM -> Document Object Model
+
+1.  HTML page is a **D**ocument
+2.  HTML elements are **O**bjects
+3.  HTML tree structure is the **M**odel
 
 - **console.log(document.all)** gives us all the elements in the html file in the type of **HTMLAllcollection**
 - **console.log(document.imgaes)** gives us all the img in the html file in the type of **HTMLCollection**
@@ -80,3 +80,33 @@
 
   `const childrenTwo = document.querySelector(childrenTwo)` <br />
   `const childrenOne = childrenTwo.previousElementSibling`
+
+---
+
+<br>
+
+### Manupulate the **DOM**
+
+- Creating an element
+
+  `const elementWantToCreate = document.createElement(tagNameWantToCreate)` <br />
+
+  e.g. `const divElement = document.createElement('div') ` <br >
+  `const paragraph = document.createElement('p')`
+
+- add className to element using dom
+
+  `element.className = className ` <br />
+  e.g. `divElement.className = 'item' `
+
+- set attribute using dom
+
+  `element.setAttribute(attributeName, attributeValue)` <br />
+  e.g. `divElement.setAttribute('id', 'firstItem')`
+
+- append created element or element at the end of a container
+
+  `container.appendChild(elem)` <br />
+  e.g. `container.appendChild(divElement)`
+
+- apend element before a childelement of a container
