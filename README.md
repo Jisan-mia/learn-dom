@@ -15,6 +15,7 @@ bk# DOM Manupulation
 ---
 
 <br />
+
 ### Some document object methods to find/select/get document elements.
 
 - **To Get element by id**:
