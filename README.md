@@ -87,8 +87,7 @@
 
 ### Manupulate the **DOM**
 
-> `appendChild()` can only take one htel element as argument <br />
-> `append()` can take both element and others(text, etc) also maltiple elements as an argument.
+> `appendChild()` can only take one htel element as argument <br /> > `append()` can take both element and others(text, etc) also maltiple elements as an argument.
 
 - Creating an element
 
@@ -122,3 +121,33 @@
 <br>
 
 ### Listening to **DOM** Events:
+
+> DOM allows Javascript to react on HTML events <br />
+> A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
+
+- trigger an action when someone click an element
+
+  `element.addEventListener(eventName, a function for what to do when this event triggered)` <br />
+  `element.addEventListener('click', (event) => {console.log(event)}) `
+
+**Examples of HTML events:**
+
+- When a user clicks the mouse
+- When the mouse moves over an element
+- When a web page has loaded
+- When an image has been loaded
+- When an input field is changed
+- When an HTML form is submitted
+- When a user strokes a key
+
+**Some common HTML events**
+| Event | Description |
+| --- | --- |
+| click | when an user clicks an element |
+| dblclick | when the user double click an element |
+| input | when an element gets user input |
+| blur | when an element losses blur |
+| focus | when an element gets focus |
+| mouseenter | when the pointer is moved onto an element |
+| keydown | when a user is pressing a key |
+| keyup | when a user releases a key |
