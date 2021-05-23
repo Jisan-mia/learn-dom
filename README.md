@@ -87,7 +87,7 @@
 
 ### Manupulate the **DOM**
 
-> `appendChild()` can only take one htel element as argument
+> `appendChild()` can only take one htel element as argument <br />
 > `append()` can take both element and others(text, etc) also maltiple elements as an argument.
 
 - Creating an element
@@ -116,3 +116,9 @@
 
   `const childElm = document.querySelector('h2Elm') `
   `container.insertBefore(divElement, childElm)`
+
+---
+
+<br>
+
+### Listening to **DOM** Events:
