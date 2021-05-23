@@ -87,8 +87,8 @@
 
 ### Manupulate the **DOM**
 
-> `appendChild()` can only take element as argument
-> `append()` can take both element and others(text, etc) as an argument.
+> `appendChild()` can only take one htel element as argument
+> `append()` can take both element and others(text, etc) also maltiple elements as an argument.
 
 - Creating an element
 
