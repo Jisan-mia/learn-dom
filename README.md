@@ -109,4 +109,7 @@
   `container.appendChild(elem)` <br />
   e.g. `container.appendChild(divElement)`
 
-- apend element before a childelement of a container
+- apend element before a childelement within container
+
+  `const childElm = document.querySelector('h2Elm') `
+  `container.insertBefore(divElement, childElm)`
