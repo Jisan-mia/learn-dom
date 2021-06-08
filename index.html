@@ -8,7 +8,57 @@
 		<title>DOM</title>
 	</head>
 	<body>
-		<h2>TODO APP</h2>
+		<header class="card">
+			<h2>JISAN'S TODO</h2>
+			<form>
+				<input id="todoInput" type="text" />
+				<input type="submit" value="Add Todo" class="add-btn btn" />
+			</form>
+		</header>
+
+		<div class="todos-container">
+			<div class="incomplete-todos card">
+				<h2>Active Todos</h2>
+				<ul class="active-todo-lists">
+					<li>
+						<input type="checkbox" name="" id="" />
+						<label for="">Todo1</label>
+						<button class="btn edit-btn">Edit</button>
+					</li>
+					<li>
+						<input type="checkbox" name="" id="" />
+						<label for="">Todo1</label>
+						<button class="btn edit-btn">Edit</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="completed-todos card">
+				<h2>Completed Todos</h2>
+				<ul class="complete-todo-lists">
+					<li>
+						<label for="">Todo3</label>
+						<button class="delete-btn btn">Delete</button>
+					</li>
+					<li>
+						<label for="">Todo3</label>
+						<button class="delete-btn btn">Delete</button>
+					</li>
+					<li>
+						<label for="">Todo3</label>
+						<button class="delete-btn btn">Delete</button>
+					</li>
+					<li>
+						<label for="">Todo3</label>
+						<button class="delete-btn btn">Delete</button>
+					</li>
+					<li>
+						<label for="">Todo3</label>
+						<button class="delete-btn btn">Delete</button>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<script src="js/script.js"></script>
 	</body>

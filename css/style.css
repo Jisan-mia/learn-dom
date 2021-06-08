@@ -5,6 +5,117 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+html {
+	min-height: 100%;
+}
 body {
 	font-family: "Roboto", sans-serif;
+	background-image: url("../img/bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0 10px;
+}
+.card {
+	box-shadow: 0 0 61px 2px rgb(29 29 179 / 78%);
+}
+
+header {
+	background-color: #fff;
+	padding: 25px 20px;
+	max-width: 400px;
+	min-width: 100px;
+	position: relative;
+	margin: 24px auto;
+}
+header h2 {
+	text-align: center;
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+form input[type="text"] {
+	font-size: 1.1rem;
+	padding: 3px 8px;
+	border: 1px solid rgba(0, 0, 255, 0.575);
+	outline: none;
+	transition: all 0.1s ease-in-out;
+	width: 100%;
+}
+form input[type="text"]:focus {
+	border-width: 0.5px;
+	box-shadow: 0 0 5px 1px rgb(18 18 226 / 14%);
+}
+
+.btn {
+	padding: 6px 8px;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+}
+.add-btn {
+	background-image: linear-gradient(to right, #6286fc, #292cff);
+	color: white;
+}
+
+.edit-btn {
+	background-image: linear-gradient(to right, #3b6e7e, #028186cb);
+	color: white;
+	margin-left: auto;
+}
+.todos-container {
+	max-width: 980px;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.incomplete-todos,
+.completed-todos {
+	min-width: 150px;
+	width: 430px;
+	max-height: 370px;
+	background: white;
+	padding: 20px 25px;
+	overflow-y: scroll;
+	margin: 10px 5px;
+}
+.incomplete-todos h2,
+.completed-todos h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: rgba(65, 65, 236, 0.808);
+}
+.incomplete-todos label {
+	margin-left: 5px;
+}
+.complete-todo-lists li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.incomplete-todos li {
+	display: flex;
+	align-items: center;
+}
+
+.delete-btn {
+	background-image: linear-gradient(to right, #da1111, #d10707);
+	color: white;
+}
+
+ul {
+	list-style-type: none;
+}
+ul li {
+	font-size: 1.2rem;
+	background-color: #adadad59;
+	padding: 5px 10px;
+	margin: 8px 0;
 }
