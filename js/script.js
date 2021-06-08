@@ -39,7 +39,7 @@ let addTodo = function (e) {
 	todoInput.value = "";
 
 	// bind the new list item to the activeTodo list
-	bindActiveTodoLists(liElm, completeTodo);
+	bindActiveTodoLists(liElm, completeTodo, editTodo);
 };
 
 let completeTodo = function () {
@@ -61,16 +61,21 @@ let completeTodo = function () {
 	bindCompleteTodoLists(liElm, deleteTodo);
 };
 
+let editTodo = function () {
+	alert("Edit functionality is one way...");
+};
+
 let deleteTodo = function () {
 	let liElm = this.parentNode;
 	let ul = liElm.parentNode;
 	ul.removeChild(liElm);
 };
 
-let bindActiveTodoLists = function (todoItem, checkboxClick) {
+let bindActiveTodoLists = function (todoItem, checkboxClick, editBtnClick) {
 	let checkbox = todoItem.querySelector('input[type="checkbox"]');
-
 	checkbox.onchange = checkboxClick;
+	let editBtn = todoItem.querySelector(".edit-btn");
+	editBtn.onclick = editBtnClick;
 };
 
 let bindCompleteTodoLists = function (todoItem, deleteButtonClick) {
@@ -79,7 +84,7 @@ let bindCompleteTodoLists = function (todoItem, deleteButtonClick) {
 };
 
 for (let i = 0; i < activeTodoLists.children.length; i++) {
-	bindActiveTodoLists(activeTodoLists.children[i], completeTodo);
+	bindActiveTodoLists(activeTodoLists.children[i], completeTodo, editTodo);
 }
 
 for (let i = 0; i < completeTodoLists.children.length; i++) {
