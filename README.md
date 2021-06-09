@@ -116,6 +116,16 @@
   `const childElm = document.querySelector('h2Elm') `
   `container.insertBefore(divElement, childElm)`
 
+- changing HTML content using dom
+
+  `const element = document.getElementById(id)`
+  `element.innerHTML = newHTMl` <br />
+  or `element.innerText = newText`
+
+- changing html elements style using dom
+
+  `element.style.propertyName = propertyValue`
+
 ---
 
 <br>
