@@ -178,4 +178,11 @@
   - delete todos
 
 ### Image Overiew
+
 ![todojisan](https://user-images.githubusercontent.com/61211600/121383081-fe96a780-c968-11eb-9ce1-b752c72c08c3.png)
+
+### Finally, This would not have been possible to document this wonderful Topic about JS DOM without **Sumit** bhaiya's guideline.
+
+**Sumit** bhaiya's Playlist about JS DOM
+
+- [Play with DOM - Bangla ( বাংলা ) DOM Tutorial](https://www.youtube.com/watch?v=XY96d0vEdFk&list=PLHiZ4m8vCp9MJDxMOzhYVuTrO1b5n-Tq_)
