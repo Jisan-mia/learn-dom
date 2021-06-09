@@ -29,6 +29,7 @@ header {
 	position: relative;
 	margin: 24px auto;
 }
+
 header h2 {
 	text-align: center;
 	font-size: 1.8rem;
@@ -39,7 +40,7 @@ form {
 	align-items: center;
 	justify-content: center;
 }
-form input[type="text"] {
+form .todo-input {
 	font-size: 1.1rem;
 	padding: 3px 8px;
 	border: 1px solid rgba(0, 0, 255, 0.575);
@@ -47,9 +48,26 @@ form input[type="text"] {
 	transition: all 0.1s ease-in-out;
 	width: 100%;
 }
-form input[type="text"]:focus {
+
+form .todo-input:focus {
 	border-width: 0.5px;
 	box-shadow: 0 0 5px 1px rgb(18 18 226 / 14%);
+}
+.todos-container input[type="text"] {
+	margin: 0 4px;
+	font-size: 1.1rem;
+	line-height: 18px;
+	height: 18px;
+	padding: 12px;
+	border: 1px solid rgba(22, 41, 207, 0.37);
+	background: rgba(255, 255, 255, 0.007);
+	font-family: Lato, sans-serif;
+	color: #888;
+	width: 210px;
+}
+.todos-container input[type="text"]:focus {
+	color: #333;
+	outline: 0.1px solid rgba(0, 0, 255, 0.432);
 }
 
 .btn {
@@ -68,11 +86,20 @@ form input[type="text"]:focus {
 	color: white;
 	margin-left: auto;
 }
+
+.delete-btn {
+	background-image: linear-gradient(to right, #da1111, #d10707);
+	color: white;
+	margin-left: 5px;
+}
+.complete-todo-lists .delete-btn {
+	margin-left: auto;
+}
 .todos-container {
 	max-width: 980px;
 	display: flex;
 	justify-content: space-around;
-	align-items: baseline;
+	align-items: space-between;
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
@@ -95,19 +122,17 @@ form input[type="text"]:focus {
 .incomplete-todos label {
 	margin-left: 5px;
 }
+.complete-todo-lists label {
+	text-decoration: line-through;
+	margin-left: 5px;
+}
 .complete-todo-lists li {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
-.incomplete-todos li {
+.active-todo-lists li {
 	display: flex;
 	align-items: center;
-}
-
-.delete-btn {
-	background-image: linear-gradient(to right, #da1111, #d10707);
-	color: white;
 }
 
 ul {
@@ -118,4 +143,17 @@ ul li {
 	background-color: #adadad59;
 	padding: 5px 10px;
 	margin: 8px 0;
+}
+
+/* Edit Task */
+ul li input[type="text"] {
+	display: none;
+}
+
+ul li.editMode input[type="text"] {
+	display: block;
+}
+
+ul li.editMode label {
+	display: none;
 }
