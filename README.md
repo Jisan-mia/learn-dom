@@ -151,3 +151,20 @@
 | mouseenter | when the pointer is moved onto an element |
 | keydown | when a user is pressing a key |
 | keyup | when a user releases a key |
+
+<br />
+
+## Project Overview
+
+> The project was created using most of the DOM methods.
+
+- An user can add todo to the active TODO ul
+- From the active todo ul user can
+  - toggle todos from active to complete
+  - edit a todo and
+  - delete a todo
+- In the complete todo ul section user can
+  - toggle todos from complete to active and
+  - delete todos
+
+### Image Overiew
