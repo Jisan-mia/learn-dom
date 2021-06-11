@@ -52,10 +52,13 @@ let addTodo = function (e) {
 let completeTodo = function () {
 	let liElem = this.parentNode;
 
-	// let checkbox = liElem.querySelector('input[type="checkbox"]');
-	// checkbox.remove();
 	let editBtn = liElem.querySelector(".edit-btn");
 	editBtn.remove();
+
+	// remove edit mode on complete todos
+	if (liElem.classList.contains("editMode")) {
+		liElem.className = "";
+	}
 
 	completeTodoLists.appendChild(liElem);
 
