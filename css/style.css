@@ -157,3 +157,7 @@ ul li.editMode input[type="text"] {
 ul li.editMode label {
 	display: none;
 }
+
+.emptyMsg {
+	display: none;
+}

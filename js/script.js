@@ -52,6 +52,7 @@ let addTodo = function (e) {
 let completeTodo = function () {
 	let liElem = this.parentNode;
 
+	// remove edit btn
 	let editBtn = liElem.querySelector(".edit-btn");
 	editBtn.remove();
 
