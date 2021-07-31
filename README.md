@@ -7,7 +7,7 @@
 3.  HTML tree structure is the **M**odel
 
 - **console.log(document.all)** gives us all the elements in the html file in the type of **HTMLAllcollection**
-- **console.log(document.imgaes)** gives us all the img in the html file in the type of **HTMLCollection**
+- **console.log(document.images)** gives us all the img in the html file in the type of **HTMLCollection**
 - **console.log(document.links)** gives us all the links in the html file in the type of **HTMLCollection**
 - **console.(document.forms)** gives all all the forms in
   the html file in the type of **HTMLCollection**.
@@ -30,7 +30,7 @@
 
   `document.getElementsByTagName(tagName)`
 
-- **To get element using any of the selector(ex. classSelector, id, tagName) using only one mathod** which gives the first matched element.
+- **To get element using any of the selector(ex. classSelector, id, tagName) using only one method** which gives the first matched element.
 
   `document.querySelector(curresponding selector with its sign as prefix)`
 
@@ -54,11 +54,11 @@
 - Find element from parent to children.:
 
   `const parent = document.querySelector(parent)`<br />
-  `cosnt children = parent.children`<br />
+  `const children = parent.children`<br />
 
 - Find element from grandParent to children:
 
-  `cosnt grandParent = document.querySelector(grandParent)`<br />
+  `const grandParent = document.querySelector(grandParent)`<br />
   `const children = grandParent.querySelectorAll(children)`<br>
 
 - Find element from children to parent:
@@ -73,10 +73,10 @@
 - Finding sibling elements
 - Find next immediate sibling
 
-  `cosnt childrenOne = document.querySelector(childrenOne)`<br />
-  `cosnt childrenTwo = childrenOne.nextElementSibling`
+  `const childrenOne = document.querySelector(childrenOne)`<br />
+  `const childrenTwo = childrenOne.nextElementSibling`
 
-- Find previous immeidate sibling
+- Find previous immediate sibling
 
   `const childrenTwo = document.querySelector(childrenTwo)` <br />
   `const childrenOne = childrenTwo.previousElementSibling`
@@ -85,9 +85,9 @@
 
 <br>
 
-### Manupulate the **DOM**
+### Manipulate the **DOM**
 
-> `appendChild()` can only take one html element as argument <br /> > `append()` can take both element and others(text, etc) also maltiple elements as an argument.
+> `appendChild()` can only take one html element as argument <br /> > `append()` can take both element and others(text, etc) also multiple elements as an argument.
 
 - Creating an element
 
@@ -111,7 +111,7 @@
   `container.appendChild(elem)` <br />
   e.g. `container.appendChild(divElement)`
 
-- apend element before a childelement within container
+- append element before a childElement within container
 
   `const childElm = document.querySelector('h2Elm') `
   `container.insertBefore(divElement, childElm)`
@@ -177,7 +177,7 @@
   - toggle todos from complete to active and
   - delete todos
 
-### Image Overiew
+### Image Overview
 
 ![todojisan](https://user-images.githubusercontent.com/61211600/121383081-fe96a780-c968-11eb-9ce1-b752c72c08c3.png)
 
