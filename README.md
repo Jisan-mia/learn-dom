@@ -20,27 +20,41 @@
 
 - **To Get element by id**:
 
-  `document.getElementById(id)`
+  ```javascript
+  document.getElementById(id);
+  ```
 
 - **To get elements by class name** which gives us all the elements which has this same className in the type of HTMLCollection.
 
-  `document.getElementsByClassName(className)`
+  ```javascript
+  document.getElementsByClassName(className);
+  ```
 
 - **To get elements by tag name** which gives us all the elements which has this same tagName in the type of HTMLCollection.
 
-  `document.getElementsByTagName(tagName)`
+  ```javascript
+  document.getElementsByTagName(tagName);
+  ```
 
 - **To get element using any of the selector(ex. classSelector, id, tagName) using only one method** which gives the first matched element.
 
-  `document.querySelector(curresponding selector with its sign as prefix)`
+  ````javascript
+  document.querySelector(curresponding selector with its sign as prefix)
 
-  e.g. `document.querySelector(".className" | "#id" | "tagName" )`
+  //example
+  document.querySelector(".className" | "#id" | "tagName" )
+  ```javascript
 
-- **To get element using any of the selector(ex. classSelector, tagName) using only one mathod** which gives all the elements which has this same tagName or classname in the type of NODEList.
+  ````
 
-  `document.querySelectorAll(curresponding selector with its sign as prefix)`
+- **To get element using any of the selector(ex. classSelector, tagName) using only one method** which gives all the elements which has this same tagName or classname in the type of NODEList.
 
-  e.g `document.querySelectorAll(".classname" | "tagName") `
+  ```javascript
+  document.querySelectorAll(curresponding selector with its sign as prefix)
+
+  // example
+  document.querySelectorAll(".classname" | "tagName")
+  ```
 
 ---
 
@@ -53,33 +67,45 @@
 
 - Find element from parent to children.:
 
-  `const parent = document.querySelector(parent)`<br />
-  `const children = parent.children`<br />
+  ```javascript
+  const parent = document.querySelector(parent);
+  const children = parent.children;
+  ```
 
 - Find element from grandParent to children:
 
-  `const grandParent = document.querySelector(grandParent)`<br />
-  `const children = grandParent.querySelectorAll(children)`<br>
+  ```javascript
+  const grandParent = document.querySelector(grandParent)
+  const children = grandParent.querySelectorAll(children)<br>
+  ```
 
 - Find element from children to parent:
 
-  `const children = document.querySelector(children)`<br />
-  `const parent = children.parentElement`
+  ```javascript
+  const children = document.querySelector(children)<br />
+  const parent = children.parentElement
+  ```
 
 - Find element from children to grandParent:
 
-  `const grandParent = children.closest(grandParent)`
+  ```javascript
+  const grandParent = children.closest(grandParent);
+  ```
 
 - Finding sibling elements
 - Find next immediate sibling
 
-  `const childrenOne = document.querySelector(childrenOne)`<br />
-  `const childrenTwo = childrenOne.nextElementSibling`
+  ```javascript
+  const childrenOne = document.querySelector(childrenOne);
+  const childrenTwo = childrenOne.nextElementSibling;
+  ```
 
 - Find previous immediate sibling
 
-  `const childrenTwo = document.querySelector(childrenTwo)` <br />
-  `const childrenOne = childrenTwo.previousElementSibling`
+  ```javascript
+  const childrenTwo = document.querySelector(childrenTwo);
+  const childrenOne = childrenTwo.previousElementSibling;
+  ```
 
 ---
 
@@ -91,40 +117,59 @@
 
 - Creating an element
 
-  `const elementWantToCreate = document.createElement(tagNameWantToCreate)` <br />
+  ```javascript
+  const elementWantToCreate = document.createElement(tagNameWantToCreate);
 
-  e.g. `const divElement = document.createElement('div') ` <br >
-  `const paragraph = document.createElement('p')`
+  //example
+  const divElement = document.createElement("div");
+  const paragraph = document.createElement("p");
+  ```
 
 - add className to element using dom
 
-  `element.className = className ` <br />
-  e.g. `divElement.className = 'item' `
+  ```javascript
+  element.className = className;
+  //example
+  divElement.className = "item";
+  ```
 
 - set attribute using dom
 
-  `element.setAttribute(attributeName, attributeValue)` <br />
-  e.g. `divElement.setAttribute('id', 'firstItem')`
+  ```javascript
+  element.setAttribute(attributeName, attributeValue);
+  //example
+  divElement.setAttribute("id", "firstItem");
+  ```
 
 - append created element or element at the end of a container
 
-  `container.appendChild(elem)` <br />
-  e.g. `container.appendChild(divElement)`
+  ```javascript
+  container.appendChild(elem);
+  //example
+  container.appendChild(divElement);
+  ```
 
 - append element before a childElement within container
 
-  `const childElm = document.querySelector('h2Elm') `
-  `container.insertBefore(divElement, childElm)`
+  ```javascript
+  const childElm = document.querySelector("h2Elm");
+  container.insertBefore(divElement, childElm);
+  ```
 
 - changing HTML content using dom
 
-  `const element = document.getElementById(id)`
-  `element.innerHTML = newHTMl` <br />
-  or `element.innerText = newText`
+  ```javascript
+  const element = document.getElementById(id)
+  element.innerHTML = newHTMl
+  //or
+  element.innerText = newText`
+  ```
 
 - changing html elements style using dom
 
-  `element.style.propertyName = propertyValue`
+  ```javascript
+  element.style.propertyName = propertyValue;
+  ```
 
 ---
 
@@ -137,8 +182,11 @@
 
 - trigger an action when someone click an element
 
-  `element.addEventListener(eventName, a function for what to do when this event triggered)` <br />
-  `element.addEventListener('click', (event) => {console.log(event)}) `
+  ```javascript
+  element.addEventListener(eventName, a function for what to do when this event triggered)
+
+  element.addEventListener('click', (event) => {console.log(event)})
+  ```
 
 **Examples of HTML events:**
 
