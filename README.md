@@ -6,11 +6,16 @@
 2.  HTML elements are **O**bjects
 3.  HTML tree structure is the **M**odel
 
-- **console.log(document.all)** gives us all the elements in the html file in the type of **HTMLAllcollection**
-- **console.log(document.images)** gives us all the img in the html file in the type of **HTMLCollection**
-- **console.log(document.links)** gives us all the links in the html file in the type of **HTMLCollection**
-- **console.(document.forms)** gives all all the forms in
-  the html file in the type of **HTMLCollection**.
+```javascript
+console.log(document.all)
+//gives us all the elements in the html file in the type of HTMLAllcollection
+console.log(document.images)
+// gives us all the img in the html file in the type of HTMLCollection
+console.log(document.links)
+//gives us all the links in the html file in the type of HTMLCollection
+console.(document.forms)
+// gives all all the forms in the html file in the type of **HTMLCollection.
+```
 
 ---
 
