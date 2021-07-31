@@ -97,8 +97,7 @@ console.(document.forms)
   const grandParent = children.closest(grandParent);
   ```
 
-- Finding sibling elements
-- Find next immediate sibling
+- Finding sibling elements. Find next immediate sibling
 
   ```javascript
   const childrenOne = document.querySelector(childrenOne);
