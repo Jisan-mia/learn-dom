@@ -6,11 +6,16 @@
 2.  HTML elements are **O**bjects
 3.  HTML tree structure is the **M**odel
 
-- **console.log(document.all)** gives us all the elements in the html file in the type of **HTMLAllcollection**
-- **console.log(document.imgaes)** gives us all the img in the html file in the type of **HTMLCollection**
-- **console.log(document.links)** gives us all the links in the html file in the type of **HTMLCollection**
-- **console.(document.forms)** gives all all the forms in
-  the html file in the type of **HTMLCollection**.
+```javascript
+console.log(document.all)
+//gives us all the elements in the html file in the type of HTMLAllcollection
+console.log(document.images)
+// gives us all the img in the html file in the type of HTMLCollection
+console.log(document.links)
+//gives us all the links in the html file in the type of HTMLCollection
+console.(document.forms)
+// gives all all the forms in the html file in the type of **HTMLCollection.
+```
 
 ---
 
@@ -20,27 +25,41 @@
 
 - **To Get element by id**:
 
-  `document.getElementById(id)`
+  ```javascript
+  document.getElementById(id);
+  ```
 
 - **To get elements by class name** which gives us all the elements which has this same className in the type of HTMLCollection.
 
-  `document.getElementsByClassName(className)`
+  ```javascript
+  document.getElementsByClassName(className);
+  ```
 
 - **To get elements by tag name** which gives us all the elements which has this same tagName in the type of HTMLCollection.
 
-  `document.getElementsByTagName(tagName)`
+  ```javascript
+  document.getElementsByTagName(tagName);
+  ```
 
-- **To get element using any of the selector(ex. classSelector, id, tagName) using only one mathod** which gives the first matched element.
+- **To get element using any of the selector(ex. classSelector, id, tagName) using only one method** which gives the first matched element.
 
-  `document.querySelector(curresponding selector with its sign as prefix)`
+  ````javascript
+  document.querySelector(curresponding selector with its sign as prefix)
 
-  e.g. `document.querySelector(".className" | "#id" | "tagName" )`
+  //example
+  document.querySelector(".className" | "#id" | "tagName" )
+  ```javascript
 
-- **To get element using any of the selector(ex. classSelector, tagName) using only one mathod** which gives all the elements which has this same tagName or classname in the type of NODEList.
+  ````
 
-  `document.querySelectorAll(curresponding selector with its sign as prefix)`
+- **To get element using any of the selector(ex. classSelector, tagName) using only one method** which gives all the elements which has this same tagName or classname in the type of NODEList.
 
-  e.g `document.querySelectorAll(".classname" | "tagName") `
+  ```javascript
+  document.querySelectorAll(curresponding selector with its sign as prefix)
+
+  // example
+  document.querySelectorAll(".classname" | "tagName")
+  ```
 
 ---
 
@@ -53,78 +72,108 @@
 
 - Find element from parent to children.:
 
-  `const parent = document.querySelector(parent)`<br />
-  `cosnt children = parent.children`<br />
+  ```javascript
+  const parent = document.querySelector(parent);
+  const children = parent.children;
+  ```
 
 - Find element from grandParent to children:
 
-  `cosnt grandParent = document.querySelector(grandParent)`<br />
-  `const children = grandParent.querySelectorAll(children)`<br>
+  ```javascript
+  const grandParent = document.querySelector(grandParent)
+  const children = grandParent.querySelectorAll(children)<br>
+  ```
 
 - Find element from children to parent:
 
-  `const children = document.querySelector(children)`<br />
-  `const parent = children.parentElement`
+  ```javascript
+  const children = document.querySelector(children)<br />
+  const parent = children.parentElement
+  ```
 
 - Find element from children to grandParent:
 
-  `const grandParent = children.closest(grandParent)`
+  ```javascript
+  const grandParent = children.closest(grandParent);
+  ```
 
-- Finding sibling elements
-- Find next immediate sibling
+- Finding sibling elements. Find next immediate sibling
 
-  `cosnt childrenOne = document.querySelector(childrenOne)`<br />
-  `cosnt childrenTwo = childrenOne.nextElementSibling`
+  ```javascript
+  const childrenOne = document.querySelector(childrenOne);
+  const childrenTwo = childrenOne.nextElementSibling;
+  ```
 
-- Find previous immeidate sibling
+- Find previous immediate sibling
 
-  `const childrenTwo = document.querySelector(childrenTwo)` <br />
-  `const childrenOne = childrenTwo.previousElementSibling`
+  ```javascript
+  const childrenTwo = document.querySelector(childrenTwo);
+  const childrenOne = childrenTwo.previousElementSibling;
+  ```
 
 ---
 
 <br>
 
-### Manupulate the **DOM**
+### Manipulate the **DOM**
 
-> `appendChild()` can only take one html element as argument <br /> > `append()` can take both element and others(text, etc) also maltiple elements as an argument.
+> `appendChild()` can only take one html element as argument <br /> > `append()` can take both element and others(text, etc) also multiple elements as an argument.
 
 - Creating an element
 
-  `const elementWantToCreate = document.createElement(tagNameWantToCreate)` <br />
+  ```javascript
+  const elementWantToCreate = document.createElement(tagNameWantToCreate);
 
-  e.g. `const divElement = document.createElement('div') ` <br >
-  `const paragraph = document.createElement('p')`
+  //example
+  const divElement = document.createElement("div");
+  const paragraph = document.createElement("p");
+  ```
 
 - add className to element using dom
 
-  `element.className = className ` <br />
-  e.g. `divElement.className = 'item' `
+  ```javascript
+  element.className = className;
+  //example
+  divElement.className = "item";
+  ```
 
 - set attribute using dom
 
-  `element.setAttribute(attributeName, attributeValue)` <br />
-  e.g. `divElement.setAttribute('id', 'firstItem')`
+  ```javascript
+  element.setAttribute(attributeName, attributeValue);
+  //example
+  divElement.setAttribute("id", "firstItem");
+  ```
 
 - append created element or element at the end of a container
 
-  `container.appendChild(elem)` <br />
-  e.g. `container.appendChild(divElement)`
+  ```javascript
+  container.appendChild(elem);
+  //example
+  container.appendChild(divElement);
+  ```
 
-- apend element before a childelement within container
+- append element before a childElement within container
 
-  `const childElm = document.querySelector('h2Elm') `
-  `container.insertBefore(divElement, childElm)`
+  ```javascript
+  const childElm = document.querySelector("h2Elm");
+  container.insertBefore(divElement, childElm);
+  ```
 
 - changing HTML content using dom
 
-  `const element = document.getElementById(id)`
-  `element.innerHTML = newHTMl` <br />
-  or `element.innerText = newText`
+  ```javascript
+  const element = document.getElementById(id)
+  element.innerHTML = newHTMl
+  //or
+  element.innerText = newText`
+  ```
 
 - changing html elements style using dom
 
-  `element.style.propertyName = propertyValue`
+  ```javascript
+  element.style.propertyName = propertyValue;
+  ```
 
 ---
 
@@ -137,8 +186,11 @@
 
 - trigger an action when someone click an element
 
-  `element.addEventListener(eventName, a function for what to do when this event triggered)` <br />
-  `element.addEventListener('click', (event) => {console.log(event)}) `
+  ```javascript
+  element.addEventListener(eventName, a function for what to do when this event triggered)
+
+  element.addEventListener('click', (event) => {console.log(event)})
+  ```
 
 **Examples of HTML events:**
 
@@ -177,7 +229,7 @@
   - toggle todos from complete to active and
   - delete todos
 
-### Image Overiew
+### Image Overview
 
 ![todojisan](https://user-images.githubusercontent.com/61211600/121383081-fe96a780-c968-11eb-9ce1-b752c72c08c3.png)
 

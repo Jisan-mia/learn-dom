@@ -11,8 +11,9 @@ const submitForm = document.querySelector("form");
 const activeTodoLists = document.querySelector(".active-todo-lists");
 const completeTodoLists = document.querySelector(".complete-todo-lists");
 
-// funcitons for todo functionality
+// functions for todo functionality
 let createTodo = function (todo) {
+	// creating elements for todo item
 	const liElem = document.createElement("li");
 	const checkbox = document.createElement("input");
 	const labelElm = document.createElement("label");
@@ -40,18 +41,23 @@ let createTodo = function (todo) {
 let addTodo = function (e) {
 	e.preventDefault();
 
-	let liElem = createTodo(todoInput.value);
+	if (!todoInput.value.trim()) {
+		alert("Please enter your todo");
+	} else {
+		let liElem = createTodo(todoInput.value);
 
-	activeTodoLists.appendChild(liElem);
+		activeTodoLists.appendChild(liElem);
+
+		// bind the new list item to the activeTodo list
+		bindActiveTodoLists(liElem, completeTodo, editTodo, deleteTodo);
+	}
 	todoInput.value = "";
-
-	// bind the new list item to the activeTodo list
-	bindActiveTodoLists(liElem, completeTodo, editTodo, deleteTodo);
 };
 
 let completeTodo = function () {
 	let liElem = this.parentNode;
 
+	// remove edit btn
 	let editBtn = liElem.querySelector(".edit-btn");
 	editBtn.remove();
 
