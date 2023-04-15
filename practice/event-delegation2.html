@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event delegation 2</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        border-bottom: 3px solid royalblue;
+      }
+      #container {
+        padding-top: 70px;
+        max-width: 600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 150px;
+      }
+      #container div {
+        background: aliceblue;
+        font-size: 1.8rem;
+        border-bottom: 3px solid royalblue;
+        padding: 15px;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      #container h2 {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #container p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+
+      #container span {
+        cursor: pointer;
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quote Cutter</h1>
+    <div id="container">
+      <div class="box" id="1">
+        <h2>
+          Quote Title 1
+          <span class="cutter">[x]</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          pariatur ut ducimus incidunt eligendi quibusdam!
+        </p>
+      </div>
+      <div class="box" id="2">
+        <h2>
+          Quote Title 2
+          <span class="cutter">[x]</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          pariatur ut ducimus incidunt eligendi quibusdam!
+        </p>
+      </div>
+      <div class="box" id="3">
+        <h2>
+          Quote Title 3
+          <span class="cutter">[x]</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          pariatur ut ducimus incidunt eligendi quibusdam!
+        </p>
+      </div>
+      <div class="box" id="4">
+        <h2>
+          Quote Title 4
+          <span class="cutter">[x]</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          pariatur ut ducimus incidunt eligendi quibusdam!
+        </p>
+      </div>
+      <div class="box" id="5">
+        <h2>
+          Quote Title 5
+          <span class="cutter">[x]</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          pariatur ut ducimus incidunt eligendi quibusdam!
+        </p>
+      </div>
+    </div>
+    <script>
+      const container = document.querySelector("#container");
+      container.addEventListener("click", function (e) {
+        const elm = e.target;
+        if (!elm.classList.contains("cutter")) {
+          return;
+        }
+        cutQuote(elm);
+      });
+
+      function cutQuote(node) {
+        const quoteParent = node.parentNode.parentNode;
+        console.log(quoteParent);
+        container.removeChild(quoteParent);
+      }
+    </script>
+  </body>
+</html>
