@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cont {
+        margin-bottom: 15px;
+      }
+      #cont *,
+      legend {
+        padding: 15px;
+        border: 1px solid tomato;
+      }
+
+      p {
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Event Capturing & Bubbling</h1>
+    <fieldset id="cont">
+      <legend>Click inside me</legend>
+      <div id="parent">
+        Parent
+        <div id="child">
+          child
+          <div id="grand-child">grand child</div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Console</legend>
+      <h4>
+        <mark
+          >capturing starts from window(root) > html > body > ... > target
+          elm</mark
+        >
+        <br />
+        <mark>
+          bubbling starts from target elm > ... > body > html > window(root)
+        </mark>
+      </h4>
+      <div id="console"></div>
+    </fieldset>
+
+    <div>
+      <h1>event.stopPropagation() & event.stopImmediatePropagation()</h1>
+      <div id=""></div>
+    </div>
+
+    <script>
+      const consoleEl = document.getElementById("console");
+      const container = document
+        .querySelector("#cont")
+        .getElementsByTagName("*");
+      for (const DOMElm of container) {
+        // this fires during the capturing phase
+        DOMElm.addEventListener(
+          "click",
+          function (e) {
+            const message = document.createElement("p");
+            message.textContent = `Capturing Phase - ${DOMElm.tagName} - ${DOMElm.id}`;
+            consoleEl.appendChild(message);
+          },
+          true
+        );
+        // this fires during the bubbling phase which is default
+        DOMElm.addEventListener(
+          "click",
+          function (e) {
+            const message = document.createElement("p");
+            message.textContent = `Bubbling Phase - ${DOMElm.tagName} - ${DOMElm.id}`;
+            consoleEl.appendChild(message);
+          },
+          false
+        );
+      }
+    </script>
+  </body>
+</html>
