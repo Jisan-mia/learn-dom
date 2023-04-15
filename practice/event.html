@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="stylesheet" href="event.css" />
+  </head>
+  <body>
+    <!-- inline event listeners -->
+    <div>
+      <h1>Different types of event listeners</h1>
+      <br />
+      <button onclick="surprise()">inline event listeners</button>
+      <button id="ip">inline properties</button>
+      <button id="evl">event listener</button>
+    </div>
+
+    <div>
+      <h1 id="colorHeader">Color Changer</h1>
+      <p id="colorPara">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi placeat,
+        repudiandae assumenda dolorum totam veritatis.
+      </p>
+      <br />
+      <button onclick="red()">Red</button>
+      <button onclick="blue()">Blue</button>
+    </div>
+
+    <div>
+      <h1>DOM Prototypes</h1>
+      <p id="protoPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, cumque?
+      </p>
+    </div>
+
+    <script src="event.js"></script>
+    <script>
+      // inline event listeners
+      function surprise() {
+        alert("Surprise! Surprise!");
+      }
+
+      //   inline properties
+      let ipBtn = document.querySelector("#ip");
+      ipBtn.onclick = function () {
+        alert("this is inline properties");
+      };
+
+      //   event listener
+      let evLBTn = document.querySelector("#evl");
+      evLBTn.addEventListener("click", function () {
+        alert("event listener using addEventListener");
+      });
+    </script>
+  </body>
+</html>
