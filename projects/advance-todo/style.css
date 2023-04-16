@@ -31,6 +31,7 @@ header {
 
 ul.list {
   padding: 15px;
+  overflow-y: auto;
 }
 
 ul li.list-item {
