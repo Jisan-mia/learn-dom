@@ -68,6 +68,9 @@ function editTodoFunk(newValue) {
   todoOnDom.querySelector("[data-list-item-text]").innerHTML = newValue;
   saveTodo();
   todoInput.value = "";
+  selectedEditTodo = ''
+  document.querySelector('button[type="submit"]').innerText = "Submit";
+
 }
 
 // f

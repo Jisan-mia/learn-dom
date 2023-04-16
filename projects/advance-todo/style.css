@@ -39,15 +39,15 @@ ul li.list-item {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-}
-
-ul li.list-item {
   font-size: 1rem;
   padding: 8px 0;
   border-bottom: 1px solid lightgray;
-  display: flex;
   align-content: center;
   justify-content: space-between;
+}
+
+ul li.list-item:last-child {
+  border-bottom-color: transparent;
 }
 
 ul li.list-item button {
