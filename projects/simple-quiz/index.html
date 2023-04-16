@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Quiz - JavaScript DOM</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Simple Quiz</h1>
+
+    <form id="quiz-form">
+      <ol>
+        <li class="quiz-item">
+          <h3>
+            What does this code return? (<code>0 || '' || false || 'hi'</code>)
+          </h3>
+          <ol type="a">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-one"
+                  id="answer-one"
+                  value="false"
+                />0</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-one"
+                  id="answer-one"
+                  value="true"
+                />'hi'</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-one"
+                  id="answer-one"
+                  value="false"
+                />false</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-one"
+                  id="answer-one"
+                  value="false"
+                />''</label
+              >
+            </li>
+          </ol>
+        </li>
+        <li class="quiz-item">
+          <h3>What it's called when a function call itself?</h3>
+          <ol type="a">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-two"
+                  id="answer-two"
+                  value="false"
+                />Inception</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-two"
+                  id="answer-two"
+                  value="false"
+                />Self-referential</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-two"
+                  id="answer-two"
+                  value="true"
+                />Recursion</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-two"
+                  id="answer-two"
+                  value="false"
+                />Who Cares</label
+              >
+            </li>
+          </ol>
+        </li>
+        <li class="quiz-item">
+          <h3>
+            How do you access the value of <code>data-count</code> data
+            attribute in javascript
+          </h3>
+          <ol type="a">
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-three"
+                  id="answer-three"
+                  value="true"
+                />
+
+                element.dataset.count</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-three"
+                  id="answer-three"
+                  value="false"
+                />element.dataAttribute.count</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-three"
+                  id="answer-three"
+                  value="false"
+                />element.dataset.dataCount
+              </label>
+            </li>
+            <li>
+              <label
+                ><input
+                  type="radio"
+                  name="answer-three"
+                  id="answer-three"
+                  value="false"
+                />element.dataCount</label
+              >
+            </li>
+          </ol>
+        </li>
+      </ol>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="alert">
+      <h3>Congrats!</h3>
+      <p>You have answered all answer correct!</p>
+    </div>
+  </body>
+</html>
