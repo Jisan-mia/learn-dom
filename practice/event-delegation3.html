@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show/hide list</title>
+    <style>
+      ul li {
+        font-size: 1.5rem;
+        border: 1px solid lightgray;
+        margin: 3px;
+        padding: 3px;
+      }
+      ul.hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <ul>
+        <li>
+          one
+          <ul>
+            <li>one</li>
+          </ul>
+        </li>
+        <li>
+          two
+          <ul>
+            <li>one</li>
+            <li>
+              two
+              <ul>
+                <li>three</li>
+                <li>four</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          three
+          <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>
+              three
+              <ul>
+                <li>four</li>
+                <li>five</li>
+                <li>six</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const container = document.querySelector("#container");
+      container.addEventListener("click", function (e) {
+        const elm = e.target;
+        if (elm.tagName !== "LI" || !elm.children.length) {
+          return;
+        }
+        showHide(elm);
+      });
+
+      function showHide(node) {
+        const childNode = node.children[0];
+        if (childNode.classList.contains("hide")) {
+          childNode.classList.remove("hide");
+        } else {
+          childNode.classList.add("hide");
+        }
+      }
+    </script>
+  </body>
+</html>
