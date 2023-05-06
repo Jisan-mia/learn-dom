@@ -6,7 +6,7 @@ export const TILE_STATUSES = {
   NUMBER: "number",
   MARKED: "marked",
 };
-
+// create board
 export function createBoard(boardSize, numberOfMines) {
   const board = [];
   const minePosition = getMinePositions(boardSize, numberOfMines);
@@ -78,6 +78,7 @@ export function revealTile(board, tile) {
   }
 }
 
+// check win
 export function checkWin(board) {
   return board.every((row) => {
     return row.every((tile) => {
@@ -90,12 +91,16 @@ export function checkWin(board) {
     });
   });
 }
+
+// check lose
 export function checkLose(board) {
   return board.some((row) => {
     return row.some((tile) => tile.status === TILE_STATUSES.MINE);
   });
 }
 
+
+// get mine position
 function getMinePositions(boardSize, numberOfMines) {
   const positions = [];
 
@@ -113,14 +118,17 @@ function getMinePositions(boardSize, numberOfMines) {
   return positions;
 }
 
+// random number 
 function randomNumber(size) {
   return Math.floor(Math.random() * size);
 }
 
+// math tile position
 function matchPosition(a, b) {
   return a.x === b.x && a.y === b.y;
 }
 
+// nearby tiles
 function nearbyTiles(board, { x, y }) {
   const tiles = [];
 
