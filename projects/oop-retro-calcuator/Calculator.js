@@ -1,4 +1,4 @@
-import { operatorSymbols } from "./utils.js";
+import { operatorSymbols, } from "./utils.js";
 
 export default class Calculator {
   
@@ -64,15 +64,47 @@ export default class Calculator {
       this.input = ''
     }
 
-    result = eval(this.input)
-    this.outputResult = result
+    this.outputResult = this.#parse(this.input)
   }
+
+  #parse(equation) {
+    if(equation.match(MULTIPLY_DIVIDE_REGEX)) {
+      const result = this.#handleMath(equation.match(MULTIPLY_DIVIDE_REGEX).groups)
+      const newEquation = equation.replace(MULTIPLY_DIVIDE_REGEX, result)
+      return this.#parse(newEquation)
+    } else if(equation.match(ADD_SUBTRACT_REGEX)) {
+      console.log(equation)
+      const result = this.#handleMath(equation.match(ADD_SUBTRACT_REGEX).groups)
+      const newEquation = equation.replace(ADD_SUBTRACT_REGEX, result)
+      return this.#parse(newEquation)
+    } else {
+      return equation
+    }
+    
+  }
+
+  #handleMath({operand1, operand2, operation}) {
+    console.log(operand1, operand2, operation)
+    const number1 = parseFloat(operand1)
+    const number2 = parseFloat(operand2)
+
+    switch (operation) {
+      case "×":
+        return number1 * number2;
+      case "÷":
+        return number1 / number2;
+      case "+":
+        return number1 + number2;
+      case "-":
+        return number1 - number2;
+    }
+  }
+
 }
 
-const NUMBER_FORMATTER = new Intl.NumberFormat('en')
-const displayOutputResultNumber = (number) => {
-  return NUMBER_FORMATTER.format(number)
-}
+const MULTIPLY_DIVIDE_REGEX = /(?<operand1>[-\d]+)\s*(?<operation>[÷×])\s*(?<operand2>[-\d]+)/
+const ADD_SUBTRACT_REGEX = /(?<operand1>[-\d]+)\s*(?<operation>[\+\-])\s*(?<operand2>[-\d]+)/
+
 
 const checkIfDotOrOperationBeingDoubled = (input) => {
   const inputArr = input.split('')
