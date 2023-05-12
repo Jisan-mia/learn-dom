@@ -23,7 +23,7 @@ body {
 .container {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 96px auto;
   row-gap: 1.9rem;
   grid-template-columns: minmax(200px, 239px);
   background-color: #e3deda;
@@ -37,19 +37,24 @@ body {
   box-shadow: inset 0 3px 3px #717161;
   background-color: #bfbfa2;
   padding: 15px 7px 5px 7px;
-  text-align: right;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .result {
-  font-size: 2.15rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 2.9rem;
+  line-height: 2.4rem;
+  text-align: right;
 }
 
 .input {
-  font-size: 0.8rem;
-  line-height: 1.5rem;
+  font-size: 1.19rem;
+  line-height: 1.6rem;
   color: #3b383d;
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .buttons {
