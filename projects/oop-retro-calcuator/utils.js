@@ -8,8 +8,29 @@ const displayOutputResultNumber = (number) => {
 
 
 const supportedKeyboardKeys = [
-  '0', '1', '2', '4', '5', '6', '7', '8', '9', '.', '=', '+', '-', '*', '/', 'c', 'C', 'd', 'D', 'Backspace'
-]
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  ".",
+  "=",
+  "+",
+  "-",
+  "*",
+  "/",
+  "c",
+  "C",
+  "d",
+  "D",
+  "Backspace",
+  "Enter",
+];
 
 const operatorSymbols  = [
   '÷', '×', '-', '+', '.'
@@ -19,5 +40,5 @@ export {
   displayOutputResultNumber,
   supportedKeyboardKeys,
   operatorSymbols
-}
+};
 
