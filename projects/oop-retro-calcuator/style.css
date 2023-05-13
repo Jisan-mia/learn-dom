@@ -55,6 +55,7 @@ body {
   text-align: left;
   display: flex;
   align-items: center;
+  word-spacing: -7px;
 }
 
 .buttons {
