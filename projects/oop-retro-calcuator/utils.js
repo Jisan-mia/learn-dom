@@ -1,4 +1,6 @@
-const NUMBER_FORMATTER = new Intl.NumberFormat('en')
+const NUMBER_FORMATTER = new Intl.NumberFormat('en', {
+  maximumFractionDigits: 10,
+})
 const displayOutputResultNumber = (number) => {
   return NUMBER_FORMATTER.format(number)
 }
