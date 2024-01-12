@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event delegation</title>
+
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #container {
+        max-width: 600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(4, 100px);
+        grid-auto-rows: 100px;
+      }
+      #container div {
+        background: tomato;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid white;
+        font-size: 1.8rem;
+      }
+      #container div.active {
+        background-color: dimgrey;
+      }
+      #container #box-13 {
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event Delegation Table - Click to change color</h1>
+    <div id="container">
+      <div class="box" id="1">1</div>
+      <div class="box" id="2">2</div>
+      <div class="box" id="3">3</div>
+      <div class="box" id="4">4</div>
+      <div class="box" id="5">5</div>
+      <div class="box" id="6">6</div>
+      <div class="box" id="7">7</div>
+      <div class="box" id="8">8</div>
+      <div class="box" id="9">9</div>
+      <div class="box" id="10">10</div>
+      <div class="box" id="11">11</div>
+      <div class="box" id="12">12</div>
+      <div id="box-13">13(has no effect)</div>
+    </div>
+    <script>
+      let selectedElm = null;
+      const container = document.querySelector("#container");
+      container.addEventListener("click", function (e) {
+        const elm = e.target;
+        if (!elm.classList.contains("box")) {
+          return;
+        }
+        activate(elm);
+      });
+
+      function activate(node) {
+        if (selectedElm !== null) {
+          selectedElm.classList.remove("active");
+        }
+        selectedElm = node;
+
+        node.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

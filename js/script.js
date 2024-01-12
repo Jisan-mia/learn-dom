@@ -38,6 +38,7 @@ let createTodo = function (todo) {
 	return liElem;
 };
 
+// add a todo
 let addTodo = function (e) {
 	e.preventDefault();
 
@@ -54,6 +55,7 @@ let addTodo = function (e) {
 	todoInput.value = "";
 };
 
+// complete a todo
 let completeTodo = function () {
 	let liElem = this.parentNode;
 
@@ -71,6 +73,7 @@ let completeTodo = function () {
 	bindCompleteTodoLists(liElem, deleteTodo, inCompleteTodo);
 };
 
+// for inCompleted todo
 let inCompleteTodo = function () {
 	let liElem = this.parentNode;
 	let deleteBtn = liElem.querySelector(".delete-btn");
@@ -83,6 +86,7 @@ let inCompleteTodo = function () {
 	bindActiveTodoLists(liElem, completeTodo, editTodo, deleteTodo);
 };
 
+// edit a todo
 let editTodo = function () {
 	let liElem = this.parentNode;
 
@@ -103,12 +107,14 @@ let editTodo = function () {
 	liElem.classList.toggle("editMode");
 };
 
+// delete a todo
 let deleteTodo = function () {
 	let liElem = this.parentNode;
 	let ul = liElem.parentNode;
 	ul.removeChild(liElem);
 };
 
+// binding active todo lists
 let bindActiveTodoLists = function (
 	todoItem,
 	checkboxClick,
@@ -123,6 +129,7 @@ let bindActiveTodoLists = function (
 	deleteBtn.onclick = deleteClick;
 };
 
+// binding completed todos
 let bindCompleteTodoLists = function (
 	todoItem,
 	deleteButtonClick,
@@ -152,4 +159,5 @@ for (let i = 0; i < completeTodoLists.children.length; i++) {
 	);
 }
 
+// submit your todos
 submitForm.addEventListener("submit", addTodo);
